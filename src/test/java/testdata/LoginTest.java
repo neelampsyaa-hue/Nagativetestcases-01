@@ -15,9 +15,9 @@ public class LoginTest extends setup {
 	    public void loginTest(String u, String p, boolean isValid) throws InterruptedException {
 
 		   LoginPage    page = new LoginPage(driver); 
-      Thread.sleep(5000);
+     
 	        page.login(u, p);
-
+	        Thread.sleep(5000);
 	        if (isValid) {
 	            Assert.assertTrue(page.isDashboardVisible(), "Login should succeed");
 	        } else {
